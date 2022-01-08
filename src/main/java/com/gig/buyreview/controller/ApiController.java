@@ -19,7 +19,6 @@ public class ApiController {
 
     @GetMapping("/hello")
     public ResponseEntity<String> hello() {
-        log.info("in");
         return ResponseEntity.ok("Hello");
     }
 }
