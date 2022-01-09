@@ -28,6 +28,7 @@ public class MemberController {
         return ResponseEntity.ok(memberService.signUp(userDto));
     }
 
+    @CrossOrigin("*")
     @GetMapping("user")
     @PreAuthorize("hasAnyRole('USER','ADMIN')")
     public ResponseEntity<Member> getMyUserInfo() {
